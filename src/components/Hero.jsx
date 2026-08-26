@@ -2,14 +2,15 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#ebdff2] via-[#fce1ec] to-[#ffe3e3] text-center px-6 sm:px-12">
+        <section
+            className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
+            style={{ backgroundImage: "url('/assets/1.jpeg')" }}
+        >
 
-            <div className="absolute top-[-10%] left-[-5%] w-[30rem] h-[30rem] bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-60"></div>
-            <div className="absolute bottom-[-10%] right-[-5%] w-[25rem] h-[25rem] bg-[#ffb6c1] rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-            <div className="absolute top-[20%] right-[10%] w-64 h-64 bg-[#d8b4e2] rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+            <div className="absolute inset-0 bg-white/75 backdrop-blur-[3px]"></div>
 
-            <div className="relative z-10 max-w-3xl flex flex-col items-center">
-        <span className="text-sm md:text-base text-[#8a4e56] tracking-[0.3em] uppercase mb-4 font-semibold opacity-90">
+            <div className="relative z-10 max-w-3xl flex flex-col items-center text-center px-6 sm:px-12">
+        <span className="text-sm md:text-base text-[#8a4e56] tracking-[0.3em] uppercase mb-4 font-bold opacity-90">
           SANÉLIA First Collection
         </span>
 
