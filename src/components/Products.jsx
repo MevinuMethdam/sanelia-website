@@ -28,20 +28,25 @@ const Products = () => {
     };
 
     return (
-        <section id="products" className="py-24 bg-white px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        <section id="products" className="py-24 bg-[#fffcfb] px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+
+            <div className="absolute top-10 left-10 w-[500px] h-[500px] bg-[#fce1ec]/40 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+            <div className="absolute bottom-10 right-10 w-[600px] h-[600px] bg-[#faece1]/60 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/80 rounded-full blur-[80px] -z-10 pointer-events-none"></div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
 
                 <div className="text-center mb-16">
-                    <span className="text-sm text-rose-gold tracking-[0.2em] uppercase font-semibold">Curated with Love</span>
-                    <h2 className="text-4xl md:text-5xl font-serif text-[#8a4e56] mt-3">Our Collection</h2>
-                    <div className="w-24 h-1 bg-blush mx-auto mt-6 rounded-full"></div>
+                    <span className="text-sm text-rose-gold tracking-[0.25em] uppercase font-semibold">Curated with Love</span>
+                    <h2 className="text-4xl md:text-5xl font-serif text-[#8a4e56] mt-3 drop-shadow-sm">Our Collection</h2>
+                    <div className="w-24 h-1 bg-blush mx-auto mt-6 rounded-full opacity-80"></div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
                     {products.map((product) => (
-                        <div key={product.id} className="group flex flex-col bg-white rounded-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div key={product.id} className="group flex flex-col bg-white/40 backdrop-blur-xl p-4 rounded-3xl border border-white/60 shadow-[0_10px_30px_rgba(183,110,121,0.04)] transition-all duration-500 hover:-translate-y-2 hover:bg-white/70 hover:shadow-[0_20px_40px_rgba(183,110,121,0.1)]">
 
-                            <div className="relative w-full aspect-[4/5] bg-[#fdf0f0] rounded-2xl overflow-hidden mb-5 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                            <div className="relative w-full aspect-[4/5] bg-[#fdf0f0]/60 rounded-2xl overflow-hidden mb-5 shadow-sm">
                                 <img
                                     src={product.img}
                                     alt={product.name}
