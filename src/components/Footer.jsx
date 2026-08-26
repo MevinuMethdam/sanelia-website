@@ -2,20 +2,82 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="bg-soft-pink py-12 text-center text-rose-gold border-t border-blush">
-            <p className="font-serif text-3xl mb-2">SANÉLIA</p>
-            <p className="text-sm text-gray-500 mb-6 font-light tracking-widest uppercase">Gifts • Accessories • Lifestyle</p>
-            <div className="flex justify-center space-x-4 mb-8">
-                <a
-                    href="https://instagram.com/sanelia.aura"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="bg-white px-6 py-2 rounded-full shadow-sm text-gray-600 hover:text-rose-gold transition duration-300"
-                >
-                    Follow @sanelia.aura
-                </a>
+        <footer className="bg-[#fff9f8] border-t border-[#fce1ec]/60 text-[#703b44] pt-16 pb-12 px-6 sm:px-12 relative overflow-hidden">
+
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-t from-[#fce1ec]/40 to-transparent rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 items-start">
+
+                <div className="space-y-4">
+                    <h3 className="text-2xl font-serif font-bold tracking-widest text-[#703b44]">
+                        SANÉLIA
+                    </h3>
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#b76e79] font-medium">
+                        Gifts • Accessories • Lifestyle
+                    </p>
+                    <p className="text-sm text-[#703b44]/70 font-light leading-relaxed">
+                        Making gifting feel a little more meaningful and a little more beautiful, every single day.
+                    </p>
+                </div>
+
+                <div className="space-y-4">
+                    <h4 className="text-sm font-semibold tracking-[0.15em] uppercase text-[#8a4e56]">
+                        Quick Links
+                    </h4>
+                    <ul className="space-y-2.5 text-sm font-light">
+                        <li>
+                            <a href="#" className="text-[#703b44]/80 hover:text-[#703b44] transition duration-300">Home</a>
+                        </li>
+                        <li>
+                            <a href="#story" className="text-[#703b44]/80 hover:text-[#703b44] transition duration-300">Our Story</a>
+                        </li>
+                        <li>
+                            <a href="#products" className="text-[#703b44]/80 hover:text-[#703b44] transition duration-300">Collection</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className="space-y-4">
+                    <h4 className="text-sm font-semibold tracking-[0.15em] uppercase text-[#8a4e56]">
+                        Stay Connected
+                    </h4>
+                    <p className="text-sm text-[#703b44]/70 font-light leading-relaxed">
+                        Follow our journey and discover daily aesthetic inspiration.
+                    </p>
+                    <div>
+                        <a
+                            href="https://instagram.com/sanelia.aura"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Instagram"
+                            className="inline-flex items-center justify-center w-11 h-11 bg-white rounded-full border border-[#fce1ec] text-[#8a4e56] shadow-sm hover:bg-[#b76e79] hover:text-white transition-all duration-300 group"
+                        >
+                            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="space-y-4">
+                    <h4 className="text-sm font-semibold tracking-[0.15em] uppercase text-[#8a4e56]">
+                        The Art of Gifting
+                    </h4>
+                    <p className="text-sm font-serif italic text-[#b76e79] leading-relaxed">
+                        "Small Things. Beautiful Moments."
+                    </p>
+                    <p className="text-xs text-[#703b44]/60 font-light leading-relaxed">
+                        Curated with love, crafted for every special occasion in your life.
+                    </p>
+                </div>
+
             </div>
-            <p className="text-xs text-gray-400">© 2026 SANÉLIA. All Rights Reserved.</p>
+
+            <div className="max-w-7xl mx-auto pt-8 border-t border-[#fce1ec]/50 flex flex-col items-center justify-center text-center text-xs text-[#703b44]/60 font-light space-y-2">
+                <p className="italic font-serif text-[#b76e79]">Designed with elegance & care.</p>
+                <p>© 2026 SANÉLIA. All Rights Reserved.</p>
+            </div>
+
         </footer>
     );
 };
