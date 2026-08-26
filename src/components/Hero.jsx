@@ -3,13 +3,13 @@ import React from 'react';
 const Hero = () => {
     return (
         <section
-            className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
             style={{ backgroundImage: "url('/assets/1.jpeg')" }}
         >
 
             <div className="absolute inset-0 bg-white/75 backdrop-blur-[3px]"></div>
 
-            <div className="relative z-10 max-w-3xl flex flex-col items-center text-center px-6 sm:px-12">
+            <div className="relative z-10 max-w-3xl flex flex-col items-center text-center px-6 sm:px-12 mt-16">
         <span className="text-sm md:text-base text-[#8a4e56] tracking-[0.3em] uppercase mb-4 font-bold opacity-90">
           SANÉLIA First Collection
         </span>
