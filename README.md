@@ -2,7 +2,7 @@
 
 A modern, elegant, and aesthetic e-commerce landing page built for **SANÉLIA** — a premium gifting and self-care brand curated with love. 
 
-**Live Website:** [https://saneli.me](https://saneli.me)
+**Live Website:** [https://sanelia.me](https://sanelia.me)
 
 ---
 
