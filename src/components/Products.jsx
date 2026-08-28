@@ -1,13 +1,13 @@
 import React from 'react';
 
 const products = [
-    { id: 1, name: 'Moisturizing Hand Cream', img: '/assets/1.jpeg' },
-    { id: 2, name: 'Hand Creams', img: '/assets/2.jpeg' },
+    { id: 1, name: 'Strawberry Hand Cream', img: '/assets/1.jpeg' },
+    { id: 2, name: 'Grapefruit Hand Cream', img: '/assets/2.jpeg' },
     { id: 3, name: 'Chamomile Hand Cream', img: '/assets/3.jpeg' },
-    { id: 4, name: 'GrapeFruit Hand Cream', img: '/assets/4.jpeg' },
-    { id: 5, name: 'Peach Moisturizing', img: '/assets/5.jpeg' },
+    { id: 4, name: 'Avocado Hand Cream', img: '/assets/4.jpeg' },
+    { id: 5, name: 'Green Tea Hand Cream', img: '/assets/5.jpeg' },
     { id: 6, name: 'Cherry Blossom', img: '/assets/6.jpeg' },
-    { id: 7, name: 'Rose Hand Cream', img: '/assets/7.jpeg' },
+    { id: 7, name: 'Peach Extract Hand Cream', img: '/assets/7.jpeg' },
     { id: 8, name: 'Moisture mud mask', img: '/assets/8.jpeg' },
     { id: 9, name: 'Peach Hand Cream', img: '/assets/9.jpeg' },
     { id: 10, name: 'Colorful Hair Claws', img: '/assets/10.jpeg' },
@@ -16,7 +16,8 @@ const products = [
     { id: 13, name: 'Hydrating Face Sheet Mask', img: '/assets/13.jpeg' },
     { id: 14, name: 'Butterfly Charm Necklace', img: '/assets/14.jpeg' },
     { id: 15, name: 'Deep Cleansing Nose Strip', img: '/assets/15.jpeg' },
-    { id: 16, name: 'Chamomile Soothing Soap', img: '/assets/16.jpeg' }
+    { id: 16, name: 'Peach Moisturizing', img: '/assets/16.jpeg' },
+    { id: 17, name: 'Rose Hand Cream', img: '/assets/17.jpeg' }
 ];
 
 const Products = () => {
