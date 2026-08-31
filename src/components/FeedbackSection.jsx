@@ -3,11 +3,11 @@ import React from 'react';
 const feedbacks = [
     {
         id: 1,
-        name: "Mevinu Methdam",
-        handle: "via WhatsApp",
-        platform: "WhatsApp",
-        text: "Great product, Received the necklace today! It's even more beautiful in person. The packaging was so lovely. Thank you Sanélia! ❤️",
-        date: "2 days ago"
+        name: "artway_station_lk",
+        handle: "via Instagram",
+        platform: "Instagram",
+        text: "Honestly, such a lovely package! 🥹🩷 My favorite is the necklace, hand cream, face mask, nose strips and the mud mask. Truly the perfect little self-care bundle! 🥹 Everything was so cute, nicely packed and absolutely worth it. You can really see the care that goes into putting these packages together. 💖 Would definitely recommend this page if you're looking for something cute for yourself or as a gift! 💖🌹",
+        date: "Today"
     },
     {
         id: 2,
@@ -16,6 +16,22 @@ const feedbacks = [
         platform: "Instagram",
         text: "Thank you really nice and such a good package🩷",
         date: "1 day ago"
+    },
+    {
+        id: 3,
+        name: "Dilmi Perera",
+        handle: "via Facebook",
+        platform: "Facebook",
+        text: "Really happy with my order! The product quality is excellent, customer service was amazing, and everything was packed so neatly and securely. Great service overall. Highly recommended! ❤️",
+        date: "Today"
+    },
+    {
+        id: 4,
+        name: "Mevinu Methdam",
+        handle: "via WhatsApp",
+        platform: "WhatsApp",
+        text: "Great product, Received the necklace today! It's even more beautiful in person. The packaging was so lovely. Thank you Sanélia! ❤️",
+        date: "2 days ago"
     }
 ];
 
@@ -46,16 +62,21 @@ const FeedbackSection = () => {
 
                             <div className="flex items-center gap-4 mb-5 pb-5 border-b border-[#fce1ec]/50">
                                 <div className="w-12 h-12 rounded-full bg-[#fce1ec] flex items-center justify-center text-[#8a4e56] font-bold text-lg shadow-sm border-2 border-white shrink-0">
-                                    {item.name.charAt(0)}
+                                    {item.name.charAt(0).toUpperCase()}
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900">{item.name}</h4>
                                     <p className="text-xs text-[#b76e79] font-medium tracking-wide">
                                         {item.handle}
                                         <span className="text-gray-400 font-light mx-1.5">|</span>
-                                        <span className={`font-normal ${item.platform === 'WhatsApp' ? 'text-green-600' : 'text-purple-600'}`}>
-                        {item.platform}
-                    </span>
+                                        <span className={`font-normal ${
+                                            item.platform === 'WhatsApp' ? 'text-green-600' :
+                                                item.platform === 'Facebook' ? 'text-blue-600' :
+                                                    item.platform === 'Instagram' ? 'text-pink-500' :
+                                                        'text-purple-600'
+                                        }`}>
+                                            {item.platform}
+                                        </span>
                                     </p>
                                 </div>
                             </div>
