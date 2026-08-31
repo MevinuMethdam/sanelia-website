@@ -56,9 +56,10 @@ export default function GiftAssistant() {
     };
 
     return (
-        <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end">
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] flex flex-col items-end">
+
             {isOpen && (
-                <div className="mb-6 w-[350px] sm:w-[400px] h-[500px] flex flex-col rounded-3xl bg-white/80 backdrop-blur-xl border border-rose-100 shadow-2xl overflow-hidden transition-all duration-300">
+                <div className="mb-4 sm:mb-6 w-[calc(100vw-2rem)] sm:w-[400px] h-[70vh] sm:h-[500px] max-h-[500px] flex flex-col rounded-3xl bg-white/80 backdrop-blur-xl border border-rose-100 shadow-2xl overflow-hidden transition-all duration-300">
 
                     <div className="bg-gradient-to-r from-rose-50 to-pink-50 p-4 flex justify-between items-center border-b border-rose-100">
                         <div className="flex items-center gap-3">
