@@ -1,6 +1,11 @@
 import React from 'react';
 
 const products = [
+    { id: 0.1, name: 'Strawberry Milk Hand Cream', img: '/assets/0.1.jpeg' },
+    { id: 0.2, name: 'Grape Candy Hand Cream', img: '/assets/0.2.jpeg' },
+    { id: 0.3, name: 'Berry Bubblegum Hand Cream', img: '/assets/0.3.jpeg' },
+    { id: 0.4, name: 'Sweet Orange Hand Cream', img: '/assets/0.4.jpeg' },
+    { id: 0.5, name: 'Green Apple Hand Cream', img: '/assets/0.5.jpeg' },
     { id: 1, name: 'Strawberry Hand Cream', img: '/assets/1.jpeg' },
     { id: 2, name: 'Grapefruit Hand Cream', img: '/assets/2.jpeg' },
     { id: 3, name: 'Chamomile Hand Cream', img: '/assets/3.jpeg' },
