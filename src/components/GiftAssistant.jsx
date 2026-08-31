@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 
-const SYSTEM_PROMPT = `You are the "Sanélia Gift Concierge", a highly elegant, friendly, and helpful AI assistant for the premium gifting and self-care brand 'Sanélia'. 
+const SYSTEM_PROMPT = `You are "Chat Sanélia", a highly elegant, friendly, and helpful AI assistant for the premium gifting and self-care brand 'Sanélia'. 
 Your tone is warm, aesthetic, and polite (use words like 'lovely', 'curated', 'perfect choice'). 
 Help customers find the perfect gifts such as Hand Creams, Charm Necklaces, and Custom Gift Boxes. 
 IMPORTANT RULE: If a customer asks for the price of any product, politely inform them to send a Direct Message (DM) to our Instagram page (@sanelia.aura) for pricing and purchasing details. Do not state any exact prices.
@@ -67,7 +67,7 @@ export default function GiftAssistant() {
                                 <Sparkles size={20} className="text-rose-500" />
                             </div>
                             <div>
-                                <h3 className="font-semibold text-rose-900 font-serif text-lg leading-tight">Sanélia Concierge</h3>
+                                <h3 className="font-semibold text-rose-900 font-serif text-lg leading-tight">Chat Sanélia</h3>
                                 <p className="text-xs text-rose-500 font-medium mt-0.5">Online & ready to help</p>
                             </div>
                         </div>
