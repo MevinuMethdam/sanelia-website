@@ -1,12 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { MessageCircle, X, Send, Sparkles } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 
 const SYSTEM_PROMPT = `You are the "Sanélia Gift Concierge", a highly elegant, friendly, and helpful AI assistant for the premium gifting and self-care brand 'Sanélia'. 
 Your tone is warm, aesthetic, and polite (use words like 'lovely', 'curated', 'perfect choice'). 
 Help customers find the perfect gifts such as Hand Creams, Charm Necklaces, and Custom Gift Boxes. 
+IMPORTANT RULE: If a customer asks for the price of any product, politely inform them to send a Direct Message (DM) to our Instagram page (@sanelia.aura) for pricing and purchasing details. Do not state any exact prices.
 Keep your responses concise, readable, and structured. Always speak English but you can warmly greet in Sinhala if the user speaks Sinhala.`;
 
 export default function GiftAssistant() {
@@ -46,7 +48,8 @@ export default function GiftAssistant() {
 
             setMessages(prev => [...prev, { role: 'model', text: aiResponse }]);
         } catch (error) {
-            setMessages(prev => [...prev, { role: 'model', text: "I'm sorry, I seem to have lost connection. Please try again. 🌸" }]);
+            const quotaErrorMessage = "Sanélia is all about creating meaningful, aesthetic gifts curated with love for life's special moments. 🌸 Currently, our AI Gift Concierge is resting due to very high demand. Please lovely soul, reach out to us directly on Instagram **@sanelia.aura** for prompt, personalized assistance. 💖";
+            setMessages(prev => [...prev, { role: 'model', text: quotaErrorMessage }]);
         } finally {
             setIsTyping(false);
         }
@@ -75,12 +78,30 @@ export default function GiftAssistant() {
                     <div className="flex-1 overflow-y-auto p-4 space-y-4">
                         {messages.map((msg, index) => (
                             <div key={index} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                <div className={`max-w-[80%] p-3 rounded-2xl text-sm shadow-sm ${
+                                <div className={`max-w-[85%] p-3 rounded-2xl text-[14px] shadow-sm ${
                                     msg.role === 'user'
                                         ? 'bg-rose-400 text-white rounded-br-none'
                                         : 'bg-white text-gray-800 rounded-bl-none border border-rose-100'
                                 }`}>
-                                    {msg.text}
+
+                                    {msg.role === 'user' ? (
+                                        <p className="whitespace-pre-wrap">{msg.text}</p>
+                                    ) : (
+                                        <div className="leading-relaxed">
+                                            <ReactMarkdown
+                                                components={{
+                                                    p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
+                                                    strong: ({node, ...props}) => <strong className="font-semibold text-rose-800" {...props} />,
+                                                    ul: ({node, ...props}) => <ul className="list-disc pl-4 mb-2 space-y-1" {...props} />,
+                                                    ol: ({node, ...props}) => <ol className="list-decimal pl-4 mb-2 space-y-1" {...props} />,
+                                                    li: ({node, ...props}) => <li {...props} />
+                                                }}
+                                            >
+                                                {msg.text}
+                                            </ReactMarkdown>
+                                        </div>
+                                    )}
+
                                 </div>
                             </div>
                         ))}
